@@ -1,31 +1,32 @@
 <html>
   <css>
     <head>
+      <script src="./script.js"></script>
       <style>
-        /* .column {
-          float: left;
-          width: 33.33%;
-          padding: 5px;
-        } */
-
-        /* Clearfix (clear floats) */
-        /* .row::after {
-          content: "";
-          clear: both;
-          display: table;
-        } */
-
         @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
         /* font-family: 'DotGothic16', sans-serif; */
+
         @import url("http://fonts.cdnfonts.com/css/dot-matrix");
+        .column {
+          width: 33.33%;
+          padding: 5px;
+        }
+        .row {
+          display: flex;
+        }
+        
+        .column_image {
+          width: 100%;
+        }
+
         body {
-          background-color: lightskyblue;
+          background-color: rgb(0, 0, 0);
         }
 
         h1 {
           text-align: center;
           font-family: "DotGothic16", sans-serif;
-          color: pink;
+          color: rgb(255, 0, 43);
           margin-left: 40px;
           text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
             1px 1px 0 #000;
@@ -47,11 +48,19 @@
           font-family: "DotGothic16", sans-serif;
           color: aliceblue;
         }
+        ul {
+          background-color: black;
+          font-family: "DotGothic16", sans-serif;
+          color: aliceblue;
+        }
+        li {text-align: center;}
+
         img {
+          object-fit: contain;
           display: block;
           margin-left: auto;
           margin-right: auto;
-          width: 25%;
+          width: 75%;
         }
       </style>
       <title>Laika's Janky & Gay Lil' Hobby Website</title>
@@ -60,31 +69,34 @@
     <body>
       <h1>Laika's Janky & Gay Lil' Hobby Website</h1>
       <img />
-      <!-- <div class="row">
+      <div class="row">
         <div class="column">
           <img
+            class="column_image"
             src="https://pbs.twimg.com/media/EgFhdfwWkAAO8ho.jpg"
             alt="Noise Misato"
-            width="180"
           />
         </div>
         <div class="column">
           <img
+            class="column_image"
             src="https://i.guim.co.uk/img/media/384f5ee3d2221ea9f2e5ed378c5b34b5624fbfcf/0_1348_3600_3079/master/3600.jpg?width=465&quality=85&dpr=1&s=none"
             alt="Wendy Carlos sat in front of her enormous modular synth"
-            style="width: 100%"
           />
         </div>
+
         <div class="column">
           <img
+            class="column_image"
             src="https://media.npr.org/assets/img/2017/10/23/gettyimages-813670966_wide-27421d436bb5850f0b03a0ffb250a32835e307ac-s1300-c85.webp"
             alt="Rayna Russom playing with LCD sound system"
-            style="width: 100%"
           />
           <!-- I wanna figure out how to display the alt text as plaintext of some sort with its own muted style underneath each image -->
         </div>
-      </div> -->
-      <div></div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <h2>
         so I'm like, really into emulated modular synthesiser noise music?
       </h2>
@@ -100,42 +112,64 @@
         amplifer unit. It genuinely sounds kinda dope! If you want me to show
         you how it works sometime I'd be super happy to. xoxo - Laika
       </p>
+      
+      <p>If you wanna see kind of what I mean,
       <a
-        href="#Example_Video"
+        
         style="
           background-color: black;
           font-family: 'DotGothic16', sans-serif;
-          color: blue;
+          color: rgb(146, 146, 255);
         "
-        >For Example!
+        ><button href="#noisevideo"
+        onclick="openPlayer(1)">click here</button>for a pretty good example of me being moody with a synth rack</p>
+        <!-- this button does not work yet  -->
       </a>
-      <!-- gonna neet some help fixing the style issues above -->
-      <!-- nmv fixed this! :3 xoxo -->
+      
+   
       <div></div>
       <div></div>
       <p>
         Here's a diagram that shows how modular synthesis works in like,
         waaaaaaay better detail than I just described :)) xoxo
       </p>
-      <!-- I need to centre align the text and change the dimentions of the surrounding black box -->
+      <div></div>
+      
       <img
         src="http://musicfromouterspace.com/analogsynth_new/ELECTRONICS/analog_synth_101/analog_synth_101.gif"
         alt="A diagram of the function of a modular synth"
-        width="180"
+        max-width="100%"
       />
+      <br /><br /><br /><br />
+
+      <h2>Did that make zero sense to you? GOOD! me too! :D </h2>
+      <div id="video"></div>
       <div style="padding: 50% 0 0 0; position: relative" id="Example_Video">
         <iframe
+        id = "noisevideo"
           src="https://player.vimeo.com/video/765820582?h=2e8653a44c&amp;autoplay=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
+        
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
           title="Witchita lineman test 1.mp4"
         ></iframe>
-        <!-- for some reason it just jumps right down to the video when i reach
-        the page? - I need to keep it locked to to the top when i open  -->
+        
       </div>
       <script src="https://player.vimeo.com/api/player.js"></script>
+      <div></div>
+      <ul>
+        Forms of music that can be created using modular synthesis include...
+        
+        <li>Noise</li>
+        <li>Techno</li>
+        <li>Ambient</li>
+        <li>Atmospheric</li>
+        <li>Industrial</li>
+      
+      </ul>
+      
     </body>
   </css>
 </html>
